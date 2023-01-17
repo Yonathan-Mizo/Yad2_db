@@ -1,15 +1,33 @@
 const  mongoose = require('mongoose')
 
-const carSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Please add a name']
+        required: [true, 'Please add a username']
+    },
+    contact: {
+        type: String,
+        required: [true, 'Please add your number']
+    },
+    email: {
+        type: String,
+        lowercase: true,
+        required: [true, 'Please add your email']
+    },
+})
+
+const carSchema = mongoose.Schema({
+    images: [String],
+
+    name: {
+        type: String,
+        required: [true, 'Please add a car name']
     },
     info: {
         type: String,
         required: [true, 'Please add a info']
     },
-    describtion: {
+    description: {
         type: String,
         required: [true, 'Please add a description']
     },
@@ -29,15 +47,13 @@ const carSchema = mongoose.Schema({
         type: Number,
         required: [true, 'Please add a description']
     },
-    contact: {
-        type: Number,
-        required: [true, 'Please add a number']
-    },
+
+    user: userSchema,
+
     salesArea: {
         type: String,
         required: [true, 'Please add a description']
     },
-    More:[{
         mileAge: {
             type: Number,
             required: [true, 'Please add a mileage']
@@ -70,8 +86,6 @@ const carSchema = mongoose.Schema({
             type: String,
             required: [true, 'Please add a previous ownership']
         }, 
-        }],
-    Amature:[ {
         airConditioner: {
             type: Boolean,
             default: false
@@ -136,8 +150,11 @@ const carSchema = mongoose.Schema({
             type: Boolean,
             default: false
         },
-    }]
-
+        contamination: {
+            type: Number,
+            min: 1,
+            max: 15
+        }
 },
 {
     timestamps: true,
