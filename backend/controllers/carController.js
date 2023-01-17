@@ -15,51 +15,54 @@ const getCar = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const setCar = asyncHandler(async (req, res) => {
-    const { name, info, describtion, price, hand, year, engineSize, contact, salesArea, More, Amature } = req.body
-    console.log(More)
+    const body = req.body
     if(!req.body) {
         res.status(400)
         throw new Error('Please add a all the information required')
     }
 
     const car = await Car.create({
+        images: req.body.images,
         name: req.body.name,
         info: req.body.info,
-        describtion: req.body.describtion,
+        description: req.body.description,
         price: req.body.price,
         hand: req.body.hand,
         year: req.body.year,
         engineSize: req.body.engineSize,
-        contact: req.body.contact,
+        user:{
+            name: req.body.user.name,
+            contact : req.body.user.contact,
+            email: req.body.user.email
+        },
         salesArea: req.body.salesArea,
-        More:[{
-        mileAge: req.body.More.mileAge,
-        engineType: req.body.More.engineType,
-        gearbox: req.body.More.gearbox,
-        color: req.body.More.color,
-        firstDay: req.body.More.firstDay,
-        lastDay: req.body.More.lastDay,
-        currentOwnership: req.body.More.currentOwnership,
-        previousOwnership: req.body.More.previousOwnership,
-        }],
-    Amature: [{
-        airConditioner: req.body.Amature.airConditioner,
-        roofWindow: req.body.Amature.roofWindow,
-        fourIntoTwo: req.body.Amature.fourIntoTwo,
-        stabilityControl: req.body.Amature.stabilityControl,
-        tirePressureSensors: req.body.Amature.tirePressureSensors,
-        identifyTrafficSign: req.body.Amature.identifyTrafficSign,
-        abs: req.body.Amature.abs,
-        powerSteering: req.body.Amature.powerSteering,
-        reverseCamera: req.body.Amature.reverseCamera,
-        pedestrianDetection: req.body.Amature.pedestrianDetection,
-        beltSensors: req.body.Amature.beltSensors,
-        electricWindows: req.body.Amature.electricWindows,
-        airBags: req.body.Amature.airBags,
-        magnesiumWheels: req.body.Amature.magnesiumWheels,
-        auxiliaryBrakeSystem: req.body.Amature.auxiliaryBrakeSystem,
-        automaticLightning: req.body.Amature.automaticLightning,
-        }]
+  
+        mileAge: req.body.mileAge,
+        engineType: req.body.engineType,
+        gearbox: req.body.gearbox,
+        color: req.body.color,
+        firstDay: req.body.firstDay,
+        lastDay: req.body.lastDay,
+        currentOwnership: req.body.currentOwnership,
+        previousOwnership: req.body.previousOwnership,
+        
+        airConditioner: req.body.airConditioner,
+        roofWindow: req.body.roofWindow,
+        fourIntoTwo: req.body.fourIntoTwo,
+        stabilityControl: req.body.stabilityControl,
+        tirePressureSensors: req.body.tirePressureSensors,
+        identifyTrafficSign: req.body.identifyTrafficSign,
+        abs: req.body.abs,
+        powerSteering: req.body.powerSteering,
+        reverseCamera: req.body.reverseCamera,
+        pedestrianDetection: req.body.pedestrianDetection,
+        beltSensors: req.body.beltSensors,
+        electricWindows: req.body.electricWindows,
+        airBags: req.body.airBags,
+        magnesiumWheels: req.body.magnesiumWheels,
+        auxiliaryBrakeSystem: req.body.auxiliaryBrakeSystem,
+        automaticLightning: req.body.automaticLightning,
+        contamination: req.body.contamination
     })
 
     res.status(200).json(car)
