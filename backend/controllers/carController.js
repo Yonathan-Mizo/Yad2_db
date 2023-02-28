@@ -1,20 +1,36 @@
 const asyncHandler = require('express-async-handler')
-const { deleteModel } = require('mongoose')
+const { deleteModel, default: mongoose } = require('mongoose')
 
 const Car = require('../model/carModel')
 
 // @desc Get Car
 // @route GET /api/cars
 // @access Private
-const getCar = asyncHandler(async (req, res) => {
+const getCars = asyncHandler(async (req, res) => {
     const cars = await Car.find()
     res.status(200).json(cars)
 })
 
+// get one
+const getCar = async (req, res) => {
+    const { id } = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: 'No such Car'})
+    }
+    const car = await car.findById(id)
+
+    if (!car) {
+        return res.status(404).json({error: 'No such Car'})
+    }
+
+    res.status(200).json(car)
+}
 // @desc Set Car
 // @route POST /api/cars
 // @access Private
 const setCar = asyncHandler(async (req, res) => {
+    
     const body = req.body
     if(!req.body) {
         res.status(400)
@@ -31,7 +47,7 @@ const setCar = asyncHandler(async (req, res) => {
         year: req.body.year,
         engineSize: req.body.engineSize,
         user:{
-            name: req.body.user.name,
+            uname: req.body.user.uname,
             contact : req.body.user.contact,
             email: req.body.user.email
         },
@@ -102,6 +118,7 @@ const deleteCar = asyncHandler(async (req, res) => {
 })
 
 module.exports = {
+    getCars,
     getCar,
     setCar,
     updateCar,
