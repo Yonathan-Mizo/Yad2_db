@@ -1,0 +1,55 @@
+#logo{
+    width: 100px;
+}
+.items {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: white;
+    padding-top: 20px;
+}
+.social {
+    width: 30px;
+    border-radius: 30px;
+    padding: 5px;
+}
+.icon {
+
+    padding-top: 1rem;
+}
+.wrapper {
+    position: relative;
+    cursor: pointer;
+    padding: 7px;
+}
+.item-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.more-items {
+    position: absolute;
+    display: flex;
+    flex-direction: raw;
+    white-space: nowrap;
+    transform: translate(-50%);
+    background-color: rgb(215, 201, 201);
+    padding: 20px 10px ;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.more-items ::before {
+    content: "";
+    bottom: 100%;
+    position: absolute;
+    transform: translate(-50%);
+}
+.wrapper:hover .more-items {
+    bottom: -350%;
+    visibility: visible;
+    opacity: 1;
+}
