@@ -155,8 +155,7 @@ const carSchema = mongoose.Schema({
             type: Number,
             min: 1,
             max: 15
-        },
-
+        }
 },
 {
     timestamps: true,
