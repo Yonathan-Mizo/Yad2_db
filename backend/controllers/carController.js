@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler')
-const { deleteModel, default: mongoose } = require('mongoose')
+const { deleteModel } = require('mongoose')
 
 const Car = require('../model/carModel')
 
@@ -7,37 +7,48 @@ const Car = require('../model/carModel')
 // @route GET /api/cars
 // @access Private
 const getCars = asyncHandler(async (req, res) => {
+    // const cars = await Car.find().populate('owner', 'userName userContact userEmail')
     const cars = await Car.find()
     res.status(200).json(cars)
+})  
+
+// @desc Get OneCar
+// @route GET /api/cars
+// @access Private
+const getOneCar = asyncHandler(async (req, res) => {
+    const car = await Car.find()
+    .populate("owner")
+    
+    console.log("> Cars with owners details\n",car);
+
+
+    // const car = await Car.findById()
+
+    // await car.populate('owner').execPopulate()
+    // console.log(car);
+    // if(!car) {
+    //     res.status(400)
+    //     throw new Error('Car not found')
+    // }
+    res.status(200).json(car)
+
+
 })
 
-// get one
-const getCar = async (req, res) => {
-    const { id } = req.params
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: 'No such Car'})
-    }
-    const car = await car.findById(id)
-
-    if (!car) {
-        return res.status(404).json({error: 'No such Car'})
-    }
-
-    res.status(200).json(car)
-}
 // @desc Set Car
 // @route POST /api/cars
 // @access Private
 const setCar = asyncHandler(async (req, res) => {
-    
-    const body = req.body
+    const body = req.body 
+
     if(!req.body) {
         res.status(400)
-        throw new Error('Please add a all the information required')
+        throw new Error('Please add  all the information required')
     }
 
     const car = await Car.create({
+        owner: req.body.owner,
+
         images: req.body.images,
         name: req.body.name,
         info: req.body.info,
@@ -46,11 +57,6 @@ const setCar = asyncHandler(async (req, res) => {
         hand: req.body.hand,
         year: req.body.year,
         engineSize: req.body.engineSize,
-        user:{
-            uname: req.body.user.uname,
-            contact : req.body.user.contact,
-            email: req.body.user.email
-        },
         salesArea: req.body.salesArea,
   
         mileAge: req.body.mileAge,
@@ -80,7 +86,7 @@ const setCar = asyncHandler(async (req, res) => {
         automaticLightning: req.body.automaticLightning,
         contamination: req.body.contamination
     })
-
+  
     res.status(200).json(car)
 })
 
@@ -119,7 +125,7 @@ const deleteCar = asyncHandler(async (req, res) => {
 
 module.exports = {
     getCars,
-    getCar,
+    getOneCar,
     setCar,
     updateCar,
     deleteCar,
