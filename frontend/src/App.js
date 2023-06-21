@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import CarDetails from "./components/CarDetails"
-import Hero from "./components/Hero"
-import Home from "./Home"
-import Footer from "./components/Footer"
+import Header from './components/Header'
+
 // import TopIframe from ".components/TopIframe"
 
 // const url = 'http://localhost:3001/'
@@ -16,11 +14,7 @@ function App() {
             <Navbar />
             <Header />
          </Router>
-         {/* <TopIframe/> */}
-         <Home/>
-         {/* <Hero /> */}
-         <br /> <br /> <br /> <br /> <br /> <br />
-         <Footer />
+        
       </>
       // <Router>
       //   <div className='container'>
