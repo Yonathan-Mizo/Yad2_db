@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+<<<<<<< HEAD
+import Header from './components/Header'
+
+=======
 import CarDetails from "./components/CarDetails"
 import Hero from "./components/Hero"
 import Home from "./Home"
 import Footer from "./components/Footer"
+>>>>>>> d3673a580193d911cdce1a3e1442ad5e3d20de7a
 // import TopIframe from ".components/TopIframe"
 
 // const url = 'http://localhost:3001/'
@@ -13,6 +18,12 @@ function App() {
    return (
       <>
          <Router>
+<<<<<<< HEAD
+            <Navbar />
+            <Header />
+         </Router>
+        
+=======
             {/* <Navbar /> */}
          </Router>
          {/* <TopIframe/> */}
@@ -20,6 +31,7 @@ function App() {
          {/* <Hero /> */}
          <br /> <br /> <br /> <br /> <br /> <br />
          <Footer />
+>>>>>>> d3673a580193d911cdce1a3e1442ad5e3d20de7a
       </>
       // <Router>
       //   <div className='container'>
@@ -34,4 +46,8 @@ function App() {
 }
 
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> d3673a580193d911cdce1a3e1442ad5e3d20de7a
