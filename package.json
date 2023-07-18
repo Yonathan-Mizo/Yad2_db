@@ -11,11 +11,12 @@
   "scripts": {
 
     "start": "node backend/server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+   
     "server": "nodemon backend/server.js",
 
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
 
   },
 
