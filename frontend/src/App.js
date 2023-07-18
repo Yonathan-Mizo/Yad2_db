@@ -5,6 +5,7 @@ import CarDetails from "./components/CarDetails"
 import Hero from "./components/Hero"
 import Home from "./Home"
 import Footer from "./components/Footer"
+import Header from './components/Header'
 // import TopIframe from ".components/TopIframe"
 
 // const url = 'http://localhost:3001/'
@@ -13,7 +14,8 @@ function App() {
    return (
       <>
          <Router>
-            {/* <Navbar /> */}
+            <Navbar />
+            <Header />
          </Router>
          {/* <TopIframe/> */}
          <Home/>

@@ -27,16 +27,6 @@ export const secondHand = [
   { name: "Appliances", path: "/Appliances" },
   { name: "Bycycle", path: "/Bycycle" },
 ];
-
-// export const needed = [
-//   { name: "All categories", path: "/All categories" },
-//   { name: "Leading companies", path: "/Leading companies" },
-//   { name: "Hi-Tech", path: "/Hi-Tech" },
-//   { name: "CV", path: "/CV" },
-//   { name: "Carrer magazine", path: "/Carrer magazine" },
-//   { name: "Smart Agent", path: "/Smart Agent" },
-// ];
-
 export const moreOnTheSite = [
   { name: "Pets", path: "/Pets" },
   { name: "Pets", path: "/Pets" },
@@ -163,119 +153,10 @@ export const FooterData = [
           caption: "Image caption 1",
           link: '#',
         },
-        // {
-        //   id: 2,
-        //   img: require("./images/footer-img2.jpg").default,
-        //   caption: "Image caption 2"
-        // },
-        // {
-        //   id: 3,
-        //   img: require("./images/footer-img3.jpg").default,
-        //   caption: "Image caption 3"
-        // },
-        // {
-        //   id: 4,
-        //   img: require("./images/footer-img3.jpg").default,
-        //   caption: "Image caption 3"
-        // }
       ]
 
     },
-    // {
-    //   socialIcons: [
-    //     {
-    //       name: 'youtube',
-    //       iconSrc: '../public/images/utube.png',
-    //       link: '#',
-    //     },
-    //     {
-    //       name: 'facebook',
-    //       iconSrc: '../images/ .png',
-    //       link: '#',
-    //     },
-    //     {
-    //       name: 'googlePlayStore',
-    //       iconSrc: '../images/ .png',
-    //       link: '#',
-    //     },
-    //     {
-    //       name: 'apple',
-    //       iconSrc: '../images/ .png',
-    //       link: '#',
-    //     },
-        
-    //   ]
-
-    // }
-
-
   ];
-  
- 
-  
-//   export default [
-//     { 
-//       id:1,
-//       title: "Real Estate",
-//       links: [
-//         { title: "Sale", href: "#" },
-//         { title: "Renting", href: "#" },
-//         { title: "Partners", href: "#" },
-//         { title: "Receiver", href: "#" },
-//         { title: "New Apartments", href: "#" },
-//         { title: "Yzer - Building smart decisons", href: "#" },
-//         { title: "Yadada - Property Valuation", href: "#" },
-//       ],
-//     },
-//     { 
-//       id:2,
-//       title: "Vehicle",
-//       links: [
-//         { title: "All vehicles", href: "#" },
-//         { title: "Commercial", href: "#" },
-//         { title: "Jeeps", href: "#" },
-//         { title: "Trucks", href: "#" },
-//         { title: "Motorcycles", href: "#" },
-//         { title: "Scooters", href: "#" },
-//         { title: "Vessel", href: "#" },
-//       ],
-//     },
-//     {
-//       id:3,
-//       title: "Second Hand",
-//       links: [
-//         { title: "For all products", href: "#" },
-//         { title: "Commercial", href: "#" },
-//         { title: "Furniture", href: "#" },
-//         { title: "Cellular", href: "#" },
-//         { title: "Appliances", href: "#" },
-//         { title: "Bycycle", href: "#" },
-//       ],
-//     },
-//     { 
-//       id:4,
-//       title: "Needed",
-//       links: [
-//         { title: "All categories", href: "#" },
-//         { title: "Leading companies", href: "#" },
-//         { title: "Hi-Tech", href: "#" },
-//         { title: "CV", href: "#" },
-//         { title: "Carrer magazine", href: "#" },
-//         { title: "Smart Agent", href: "#" },
-//       ],
-//     },
-//     { 
-//       id:5,
-//       title: "More on the site",
-//       links: [
-//         { title: "Pets", href: "#" },
-//         { title: "Professionals", href: "#" },
-//         { title: "Private teachers", href: "#" },
-//         { title: "Tourisn and recreation", href: "#" },
-//         { title: "Second hand magazine", href: "#" },
-//       ],
-//     },
-//   ];
   
  
   
