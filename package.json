@@ -1,6 +1,6 @@
 {
-
-  "name": "final_project",
+  "homepage": "http://Yonathan-Mizo.github.io/Yad2_db",
+  "name": "yad2_project",
 
   "version": "1.0.0",
 
@@ -11,7 +11,8 @@
   "scripts": {
 
     "start": "node backend/server.js",
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "nodemon backend/server.js",
 
     "client": "npm start --prefix frontend"
