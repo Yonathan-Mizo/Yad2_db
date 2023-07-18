@@ -135,4 +135,8 @@ const CarDetails = ({ car } ) => {
   );
 };
 
+<<<<<<< HEAD
 export default CarDetails;
+=======
+export default CarDetails;
+>>>>>>> 2a9e7336c44fbb12c6b5900aafc2e1801b3c6d48

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+
+=======
 * {
     box-sizing: border-box;
     margin:0; 
@@ -89,3 +101,4 @@ header a {
     grid-template-columns: 1fr 1fr;
     column-gap: 0px;
 }
+>>>>>>> d3673a580193d911cdce1a3e1442ad5e3d20de7a
