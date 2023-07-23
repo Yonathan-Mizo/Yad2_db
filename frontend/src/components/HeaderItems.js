@@ -53,36 +53,4 @@ export const headerItems = [
         path: "./accessories",
         cName: "header-item",
     },
-<<<<<<< HEAD
-//     {
-//         id: 10,
-//         icon: "car.png",
-//         title: "Price List Convention",
-//         path: "./price_list_convention",
-//         cName: "header-item",
-//     },
-//     {
-//         id: 11,
-//         icon: "price-tag.png",
-//         title: "Convention",
-//         path: "./convention",
-//         cName: "header-item",
-//     }
   ]
-=======
-    // {
-    //     id: 10,
-    //     icon: "car.png",
-    //     title: "Price List Convention",
-    //     path: "./price_list_convention",
-    //     cName: "header-item",
-    // },
-    // {
-    //     id: 11,
-    //     icon: "price-tag.png",
-    //     title: "Convention",
-    //     path: "./convention",
-    //     cName: "header-item",
-    // }
-]
->>>>>>> 2a9e7336c44fbb12c6b5900aafc2e1801b3c6d48
